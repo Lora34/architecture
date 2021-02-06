@@ -1,0 +1,123 @@
+@import 'normalize'
+@import 'fonts'
+
+
+//<Основные параметры>================================================================
+
+html
+    box-sizing: border-box
+    overflow-y: scroll //убирает подергивание страницы при переходе со страницы со скролом на страницу без
+    max-width: 1400px
+    margin: 0 auto
+
+*, *::before, *::after
+    box-sizing: inherit
+
+body
+    +regular
+    font-size: 18px
+    line-height: 28px
+    color: #747DA1
+    background-color: #ffffff
+
+li
+    list-style-type: none
+
+a 
+    text-decoration: none
+    
+.container
+    max-width: 1021px
+    margin: 0 auto
+
+.title  
+    +bold
+    font-weight: 500
+    font-size: 38px
+    line-height: 48px
+    color: #000000
+    //margin: 0 auto
+
+.subtitle  
+    +regular
+    font-size: 18px
+    line-height: 28px
+    color: #B1B6CA
+
+.btn
+    display: block
+    font-family: +boldRegular
+    font-weight: 700
+    font-size: 15px
+    line-height: 146.5%
+    color: #ffffff
+//    width: 138px
+    height: 53px
+    text-align: center
+    background-color: #414141
+    border-radius: 2px
+
+    &--orang
+        color: #FFFFFF
+        background-color: #FDAE54
+
+.btn::before
+
+//<Основные параметры>================================================================
+.header 
+    min-height: 100vh
+    //background-size: cover 
+
+    &__top
+        padding-top: 45px 
+
+    &__top-wrapper
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        align-content: start
+
+    &__top-menu
+        display: flex
+        flex-wrap: wrap
+
+    &__top-list
+        display: grid
+        grid-template-columns: repeat(4, 1fr)
+        justify-content: space-between
+        align-content: center
+        min-width: 391px
+
+        &--active
+        
+    &__top-item::hover, 
+    &__top-item::focus, 
+    &__top-item::active
+        color: #000000
+
+    &__content
+        margin-top: 95px
+        background: #fff url('/img/header.jpg') no-repeat right
+
+    &__content-title
+        font-family: Mulish, sans-serif
+        font-style: normal
+        font-weight: 900
+        font-size: 60px
+        line-height: 115%
+        font-size: 60px
+        line-height: 115%
+        color: #000000
+        max-width: 510px
+        padding-top: 185px
+
+    &__content-subtitle
+        margin-top: 50px
+        max-width: 420px
+
+    &__content-btn
+        margin-top: 47px
+        padding: 15px 59px 15px 30px
+        background-color: #414141
+    
+
