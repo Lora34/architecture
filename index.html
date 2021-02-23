@@ -15,13 +15,22 @@
                         <img class='header__top-img' src="./img/Logo.svg" alt="Logo">
                         <p class="header__top-text">Arkimon</p>
                     </div>
-                    <div class="header__top-menu">
-                        <ul class="header__top-list">
-                            <li class="header__top-item"><a class='link' href="#!">Home</a></li>
-                            <li class="header__top-item"><a class='link' href="#!">Service</a></li>
-                            <li class="header__top-item"><a class='link' href="#!">Projects</a></li>
-                            <li class="header__top-item"><a class='link' href="#!">News</a></li>
+                    <nav class="header__nav">
+                        <ul class="header__list">
+                            <li class="header__item"><a class='header__link' href="#!">Home</a></li>
+                            <li class="header__item"><a class='header__link' href="#!">Service</a></li>
+                            <li class="header__item"><a class='header__link' href="#!">Projects</a></li>
+                            <li class="header__item"><a class='header__link' href="#!">News</a></li>
                         </ul>
+                        <div class="header__nav-close">
+                            <span class="header__nav-close-line"></span>
+                            <span class="header__nav-close-line"></span>
+                        </div>
+                    </nav>
+                    <div class="header__burger burger">
+                        <span class="burger__line burger__line_first"></span>
+                        <span class="burger__line burger__line_second"></span>
+                        <span class="burger__line burger__line_third"></span>
                     </div>
                 </div>
             </div>
@@ -34,7 +43,7 @@
                     <div class="header__content-subtitle subtitle">
                         <p>Cras vel cursus libero. Vestibulum porttitor nunc enim, quis congue leo fringilla ut. Quisque in lacus lacus. Nunc malesuada.</p>
                     </div>
-                    <button class="header__content-btn btn" type="submit">Explore Projects <i class="header__arrow arrow"></i></button>
+                    <button class="header__content-btn btn" id="myBtn" type="submit">Explore Projects <i class="header__arrow arrow"></i></button>
             </div>
         </div>
     </header>
@@ -265,5 +274,14 @@
             </div>
         </div>
     </footer>
+    <div class="modal" id="myModal">
+        <div class="modal__content">
+            <span class="modal__close">&times;</span>
+            <form action="">
+                <p>Модальное окно</p>
+            </form>
+        </div>
+    </div>
+	<script src="js/script.js" defer></script>
 </body>
 </html>

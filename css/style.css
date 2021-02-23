@@ -337,6 +337,7 @@ a {
 .container {
   max-width: 1021px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .title {
@@ -367,6 +368,7 @@ a {
 
 .header {
   min-height: 100vh;
+  margin-bottom: 185px;
 }
 
 .header__top {
@@ -386,7 +388,22 @@ a {
       align-content: start;
 }
 
-.header__top-menu {
+.header__top-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-column-gap: 12px;
+          column-gap: 12px;
+}
+
+.header__nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -394,11 +411,12 @@ a {
       flex-wrap: wrap;
 }
 
-.header__top-list {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+.header__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -407,13 +425,19 @@ a {
   min-width: 391px;
 }
 
-.header__top-item::hover, .header__top-item::focus, .header__top-item::active {
+.header__item::hover, .header__item::focus, .header__item::active {
   color: #000000;
+}
+
+.header__burger {
+  display: none;
+  width: 40px;
+  height: 28px;
+  position: relative;
 }
 
 .header__content {
   margin-top: 95px;
-  background: #fff url("/img/header.jpg") no-repeat right;
 }
 
 .header__content-title {
@@ -426,17 +450,144 @@ a {
   line-height: 115%;
   color: #000000;
   max-width: 510px;
-  padding-top: 185px;
+  padding-top: 280px;
+  margin-bottom: 50px;
 }
 
 .header__content-subtitle {
-  margin-top: 50px;
+  margin-bottom: 47px;
   max-width: 420px;
 }
 
 .header__content-btn {
-  margin-top: 47px;
   padding: 15px 59px 15px 30px;
   background-color: #414141;
 }
+
+.burger__line {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #747DA1;
+  position: absolute;
+  left: 0;
+}
+
+.burger__line_first {
+  top: 0;
+}
+
+.burger__line_second {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.burger__line_third {
+  bottom: 0;
+}
+
+.benefits__cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: start;
+      align-content: start;
+  -webkit-column-gap: 92px;
+          column-gap: 92px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal__content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.modal__close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/*Media start*/
+@media screen and (max-width: 767px) {
+  .header__burger {
+    display: block;
+  }
+  .header__nav {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 10;
+    padding: 75px;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: .2s all linear;
+    transition: .2s all linear;
+  }
+  .header__nav_active {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .header__item {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .header__top-item::last-child {
+    margin-bottom: 0;
+  }
+  .header__link {
+    font-size: 42px;
+    line-height: 48px;
+  }
+  .header__nav-close {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 11;
+  }
+  .header__nav-close-line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+  }
+  .header__nav-close-line:first-child {
+    -webkit-transform: translateY(-50%) rotate(45deg);
+            transform: translateY(-50%) rotate(45deg);
+  }
+  .header__nav-close-line:last-child {
+    -webkit-transform: translateY(50%) rotate(-45deg);
+            transform: translateY(50%) rotate(-45deg);
+  }
+}
+
+/*Media end*/
 /*# sourceMappingURL=style.css.map */
